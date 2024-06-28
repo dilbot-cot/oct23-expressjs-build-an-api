@@ -80,6 +80,16 @@ app.get('/', (request, response) => {
     })
 })
 
+// Roles routing
+const rolesController = require('./controllers/RoleRoute')
+app.use('/roles', rolesController)
+
+const userController = require('./controllers/UserRoute')
+app.use('/users', userController)
+
+const postController = require('./controllers/PostRoute')
+app.use('/posts', postController)
+
 // Database dump of all info
 app.get("/databaseDump", async (request, response) => {
     const dumpContainer = {};

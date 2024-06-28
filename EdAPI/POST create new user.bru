@@ -1,0 +1,21 @@
+meta {
+  name: POST create new user
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/users/sign-up
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "dilloncotter@icloud.com",
+    "password": "1AmGr34t",
+    "username": "Awesome",
+    "country": "Australia",
+    "role": "667e8c70a54e6b00ed576b21"
+  }
+}
